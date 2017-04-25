@@ -3,24 +3,77 @@
 # - send data
 # - receive data
 # - close socket.
-# 02
-# Adding sys to allow for port argument (poor man's option parser)
+# socket-client-02
+# - adding sys to allow for port argument (poor man's option parser)
+# socket-client-03
+# - adding option parser
+# - adding try/except socket error
+# - adding while loop
+# - adding input file for reading
+# - sending dat from input file
+# - removing recv data.. just send data
+
+"""
+IMPORTS
+
+Import any libraries our script requires.
+"""
 
 import socket
 import sys
+import os.path
+from optparse import OptionParser
 
-port = sys.argv[1]
 
-print '[*] Connecting to port %s on 127.0.0.1' % str(port)
+"""
+PRELIMINARIES
+
+Get options from option parser, etc.
+"""
+
+# Use OptionParser just to make the interface and feedback nice
+parser = OptionParser()
+# We setting a sane default so this is not required.
+parser.add_option("-p", "--port", dest="port", default="21337",
+                    help="Server port to connect to.")
+(options, args) = parser.parse_args()
+port = options.port
+
+infile = 'subnets.csv'
+
+try:
+    os.path.isfile(infile)
+except IOError:
+    print '[-] File does not exist!'
+    sys.exit()
+
+
+"""
+CONNECT TO REMOTE SERVER
+
+This is the main part of our script.
+"""
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Make sure an int is used.
-s.connect(('127.0.0.1', int(port)))
+try:
+    # Make sure an int is used.
+    print '[*] Connecting to port %s on 127.0.0.1' % str(port)
+    s.connect(('127.0.0.1', int(port)))
+except socket.error, msg:
+    print "[ERROR] Caught exception socket.error : %s" % msg
+    sys.exit()
 
-s.send('Hello, server\n')
-data = s.recv(1024)
+
+ifile = open(infile, 'r')
+
+s.send('Subnet list..\n')
+
+for f in ifile:
+    print '[*] sending: %s' % f
+    s.send(f)
+
+#data = s.recv(1024)
+#print '[received] ', data
+
 s.close()
-
-print '[received] ', data
-
