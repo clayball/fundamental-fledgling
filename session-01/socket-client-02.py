@@ -2,7 +2,10 @@
 # - open a socket
 # - send data
 # - receive data
-# - close socket.
+# - close socket
+# A server can be emulated in another terminal using netcat
+# $ nc -lk -p 21337
+#
 # 02
 # Adding sys to allow for port argument (poor man's option parser)
 

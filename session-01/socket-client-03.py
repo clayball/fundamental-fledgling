@@ -2,9 +2,13 @@
 # - open a socket
 # - send data
 # - receive data
-# - close socket.
+# - close socket
+# A server can be emulated in another terminal using netcat
+# $ nc -lk -p 21337
+#
 # socket-client-02
 # - adding sys to allow for port argument (poor man's option parser)
+#
 # socket-client-03
 # - adding option parser
 # - adding try/except socket error
@@ -55,7 +59,6 @@ This is the main part of our script.
 """
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 try:
     # Make sure an int is used.
     print '[*] Connecting to port %s on 127.0.0.1' % str(port)
@@ -64,16 +67,13 @@ except socket.error, msg:
     print "[ERROR] Caught exception socket.error : %s" % msg
     sys.exit()
 
-
 ifile = open(infile, 'r')
 
 s.send('Subnet list..\n')
-
 for f in ifile:
     print '[*] sending: %s' % f
     s.send(f)
 
-#data = s.recv(1024)
-#print '[received] ', data
-
 s.close()
+
+print '[*] Goodbye'

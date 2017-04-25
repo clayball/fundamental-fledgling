@@ -3,6 +3,9 @@
 # - send data
 # - receive data
 # - close socket.
+#
+# A server can be emulated in another terminal using netcat
+# $ nc -lk -p 21337
 
 import socket
 
