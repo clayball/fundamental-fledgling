@@ -1,6 +1,7 @@
-Programming Essentials for Security Professionals
-=================================================
+Fundamental Fledgling
+=====================
 
+Programming Essentials for Information Security Professionals
 
 ## Session 1
 
@@ -8,12 +9,18 @@ Programming Essentials for Security Professionals
 
 Creating short demos of the following:
 
+- Getting started
 - Reading lines from a file
 - Writing lines to a file
-- Using an API (Twitter)
-- A basic RSS reader
-
+- Socket client
+- Adding features
+  - import sys
+  - option parser
+  - 
 
 ## Session 2
 
+TODO: WIP
+- A basic RSS reader
+- Using an API (Twitter)
 - Working with an SQLite DB
