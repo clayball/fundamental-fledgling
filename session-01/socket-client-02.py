@@ -12,6 +12,25 @@
 import socket
 import sys
 
+"""
+These constants represent the address (and protocol) families, used for the
+first argument to socket().
+
+    socket.AF_UNIX
+    socket.AF_INET
+    socket.AF_INET6
+
+These constants represent the socket types, used for the second argument to
+socket().
+
+    socket.SOCK_STREAM
+    socket.SOCK_DGRAM
+    socket.SOCK_RAW
+    socket.SOCK_RDM
+    socket.SOCK_SEQPACKET
+
+"""
+
 port = sys.argv[1]
 
 print '[*] Connecting to port %s on 127.0.0.1' % str(port)
