@@ -8,6 +8,7 @@
 #
 # 02
 # Adding sys to allow for port argument (poor man's option parser)
+# Add a list example.. just to demonstrate
 
 import socket
 import sys
@@ -33,6 +34,8 @@ socket().
 
 port = sys.argv[1]
 
+ip_list = ['192.168.2.2', '192.168.2.3', '192.168.2.4']
+
 print '[*] Connecting to port %s on 127.0.0.1' % str(port)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -40,9 +43,14 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Make sure an int is used.
 s.connect(('127.0.0.1', int(port)))
 
-s.send('Hello, server\n')
-data = s.recv(1024)
+s.send('Hello, server..\n')
+
+for ip in ip_list:
+    s.send(ip + '\n')
+
+#data = s.recv(1024)
+#print '[received] ', data
+
 s.close()
 
-print '[received] ', data
 
