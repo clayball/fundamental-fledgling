@@ -7,8 +7,8 @@
 # $ nc -lk -p 21337
 #
 # 02
-# Adding sys to allow for port argument (poor man's option parser)
-# Add a list example.. just to demonstrate
+# - adding sys to allow for port argument (poor man's option parser)
+# - adding a list example.. just to demonstrate
 
 import socket
 import sys
@@ -48,9 +48,5 @@ s.send('Hello, server..\n')
 for ip in ip_list:
     s.send(ip + '\n')
 
-#data = s.recv(1024)
-#print '[received] ', data
-
 s.close()
-
 
