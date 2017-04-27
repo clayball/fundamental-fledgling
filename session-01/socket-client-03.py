@@ -1,26 +1,24 @@
-# A basic socket client
-# - open a socket
-# - send data
-# - receive data
-# - close socket
-# A server can be emulated in another terminal using netcat
-# $ nc -lk -p 21337
-#
-# socket-client-02
-# - adding sys to allow for port argument (poor man's option parser)
-#
-# socket-client-03
-# - adding option parser
-# - adding try/except socket error
-# - adding while loop
-# - adding input file for reading
-# - sending data from input file
-# - removing recv data.. just send data
+#!/usr/bin/env python
 
 """
-IMPORTS
+A basic socket client
+- open a socket
+- send data
+- receive data
+- close socket
+A server can be emulated in another terminal using netcat
+$ nc -lk -p 21337
 
-Import any libraries our script requires.
+socket-client-02
+- adding sys to allow for port argument (poor man's option parser)
+
+socket-client-03
+- adding option parser
+- adding try/except socket error
+- adding while loop
+- adding input file for reading
+- sending data from input file
+- removing recv data.. just send data
 """
 
 import socket
@@ -45,6 +43,7 @@ socket().
     socket.SOCK_RDM
     socket.SOCK_SEQPACKET
 
+Reference, https://docs.python.org/2/library/socket.html
 """
 
 """

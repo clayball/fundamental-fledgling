@@ -1,14 +1,19 @@
-# A basic socket client
-# - open a socket
-# - send data
-# - receive data
-# - close socket
-# A server can be emulated in another terminal using netcat
-# $ nc -lk -p 21337
-#
-# 02
-# - adding sys to allow for port argument (poor man's option parser)
-# - adding a list example.. just to demonstrate
+#!/usr/bin/env python
+
+"""
+A basic socket client
+- open a socket
+- send data
+- receive data
+- close socket
+A server can be emulated in another terminal using netcat
+$ nc -lk -p 21337
+
+02
+- adding sys to allow for port argument (poor man's option parser)
+    https://docs.python.org/2/library/sys.html
+- adding a list example.. just to demonstrate
+"""
 
 import socket
 import sys
@@ -29,7 +34,8 @@ socket().
     socket.SOCK_RAW
     socket.SOCK_RDM
     socket.SOCK_SEQPACKET
-
+    
+Reference, https://docs.python.org/2/library/socket.html
 """
 
 port = sys.argv[1]

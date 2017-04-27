@@ -1,11 +1,15 @@
-# A basic socket client
-# - open a socket
-# - send data
-# - receive data
-# - close socket.
-#
-# A server can be emulated in another terminal using netcat
-# $ nc -lk -p 21337
+#!/usr/bin/env python
+
+"""
+A basic socket client
+- open a socket
+- send data
+- receive data
+- close socket.
+
+A server can be emulated in another terminal using netcat
+$ nc -lk -p 21337
+"""
 
 import socket
 
@@ -26,6 +30,7 @@ socket().
     socket.SOCK_RDM
     socket.SOCK_SEQPACKET
 
+Reference, https://docs.python.org/2/library/socket.html
 """
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

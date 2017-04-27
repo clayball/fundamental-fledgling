@@ -4,7 +4,8 @@
 # Test to ASCII art provided by http://www.patorjk.com/software/taag/
 
 HOSTS_FILE=$1
-i=0, total=0
+i=0
+total=0
 
 while read hosts; do
     # Read from nmap host discovery scan
@@ -15,6 +16,7 @@ while read hosts; do
     fi
     total=$((total + 1))
 done < $HOSTS_FILE
+
 
 unassigned=$((total - i))
 
