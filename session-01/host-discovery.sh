@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-DATE=`date +%Y%m%d`
+NECTOR_BACKEND='/data/nector'
+DATE=$(date +%Y%m%d)
 
-nmap -sL -iL /data/scans/ips-by-subnet.txt -oN /data/scans/results/host-discovery-$DATE.txt
+if [ ! -d $NECTOR_BACKEND ]; then
+    echo "[Error] ${NECTOR_BACKEND} does not exist. Please create."
+    exit 0
+else
+    nmap -sL -iL ${NECTOR_BACKEND}/subnets.csv -oN ${NECTOR_BACKEND}/host-discovery-$DATE.txt
+fi
