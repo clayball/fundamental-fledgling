@@ -44,7 +44,7 @@ echo "[*]   IPv4 addresses : $total"
 echo "[*] ================================================="
 if [ "$GIVEBACK" -eq "1" ]; then
     echo " "
-    echo "[WOOH!] Call ARIN and give back a few IPv4 subnet ranges!"
+    echo "[WOOH!] Call ARIN and give back a few IPv4 subnets!"
     echo " "
 else
     echo " "

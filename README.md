@@ -3,17 +3,25 @@ Fundamental Fledgling
 
 Programming Essentials for Information Security Professionals
 
+This series will cover a variety of programming technologies.
+- Introduction to an IDE
+- Python
+- Bash
+- Python debugger
+
+
 ## Session 1
 
-- General overview of PyCharmEDU.
-
-- Highlight some features of the PyCharm IDE.
+- General overview of PyCharmEDU
+    - A few examples
+    
+- Highlight some features of the PyCharm IDE
     - Project structure
     - markdown support (plugins)
     - Database connectivity
     - Project settings (interpreter, debugger)
 
-- Demo the following.. this highlights a general process and workflow.
+- Demo the following.. this highlights a general process and workflow
 
     - Reading lines from a file
     - Writing lines to a file
