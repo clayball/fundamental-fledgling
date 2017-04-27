@@ -14,7 +14,7 @@
 # - adding try/except socket error
 # - adding while loop
 # - adding input file for reading
-# - sending dat from input file
+# - sending data from input file
 # - removing recv data.. just send data
 
 """
