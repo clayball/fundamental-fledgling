@@ -26,6 +26,8 @@ else
     GIVEBACK=0
 fi
 
+clear
+
 echo " "
 echo " "
 echo " ▄ .▄      .▄▄ · ▄▄▄▄▄ ▐ ▄  ▄▄▄· • ▌ ▄ ·. ▄▄▄ ..▄▄ · "
@@ -42,7 +44,10 @@ echo "[*]   IPv4 addresses : $total"
 echo "[*] ================================================="
 if [ "$GIVEBACK" -eq "1" ]; then
     echo " "
-    echo "[WOOH!] Call ARIN and give back a few subnet ranges!"
+    echo "[WOOH!] Call ARIN and give back a few IPv4 subnet ranges!"
+    echo " "
 else
     echo " "
 fi
+echo " "
+
