@@ -18,9 +18,9 @@ This series will cover a variety of programming technologies.
     - A few examples
     
 - Highlight some features of the PyCharm IDE
-    - Project structure
-    - markdown support (plugins)
+    - Project files and Structure
     - Database connectivity
+    - markdown support (plugins)
     - Project settings (interpreter, debugger)
 
 - Demo the following.. this highlights a general process and workflow
@@ -49,6 +49,9 @@ Run/Debug Configuration
 
 Markdown
 - https://daringfireball.net/projects/markdown/syntax
+
+PEP 8, Style Guide for Python Code 
+- https://www.python.org/dev/peps/pep-0008/
 
 
 ## Session 0x02

@@ -3,12 +3,14 @@
 # Pass in the nmap host discovery scan output file.
 # Test to ASCII art provided by http://www.patorjk.com/software/taag/
 
+# TODO: do something useful with this script
+
 HOSTS_FILE=$1
 i=0
 total=0
 
 while read hosts; do
-    # Read from nmap host discovery scan
+    # * Read from nmap host discovery scan
     last=${hosts: -1}
     echo "[+] $hosts, $last"
     if [ "$last" == ")" ]; then
